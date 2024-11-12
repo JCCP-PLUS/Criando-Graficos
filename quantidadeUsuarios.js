@@ -1,6 +1,6 @@
 import { getCSS, tickConfig } from ".common.js"
 
-async function quantidadeUsuariosPorRede() {
+async function quantidadeUsuariosPorRede() 
     const url = https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json
     const res = await fetch(url)
     const dados = await res.json()
@@ -11,7 +11,7 @@ async function quantidadeUsuariosPorRede() {
         {
             x: nomeDasRedes,
             y: quantidadeDeUsuarios,
-            type: 'bar',
+            type: 'bar,
             marker: {
                 color: getCSS(--primary-color)
             }
@@ -20,5 +20,13 @@ async function quantidadeUsuariosPorRede() {
 
     const layout = {
         plot_bgcolor: getCSS(--bg-color),
-        paper_bgcolor: getCSS
-    }
+        paper_bgcolor: getCSS(--bg-color)
+        title: {
+            text: Redes sociais com mais usuarios,
+            x: 0,
+            font: {
+                color: getCSS(--primary-color),
+                size: 30,
+                font: getCSS(--font)
+            }
+        }
