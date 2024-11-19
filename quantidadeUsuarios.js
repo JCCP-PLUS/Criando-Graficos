@@ -29,4 +29,13 @@ async function quantidadeUsuariosPorRede()
                 size: 30,
                 font: getCSS(--font)
             }
-        }
+        },
+        xaxis: {
+            tickfont? tickConfig,
+            title: {
+                text: 'nome das redes',
+                font: {
+                    color: getCSS('---secondary-color')
+                }
+            }
+        },
